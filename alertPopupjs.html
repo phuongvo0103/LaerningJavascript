@@ -4,7 +4,7 @@
         <title>Hello</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <!--<link href="css/style.css" rel="stylesheet">-->
         <script>
             
             // confirm
@@ -15,11 +15,53 @@
             // }
 
             //prompt
-            var demo =prompt("xin moi ban nhap ? ");
+           /* var demo =prompt("xin moi ban nhap ? ");
             if (demo==null) {
                 alert("Vui long nhap du lieu");
             } else {
                 alert(demo);
+            }*/
+
+           //Object in javaScript
+           //template Object {key: value}
+           var myObject = {
+                message1 :function() {
+                    return "";
+                }
+           };
+           var myObject1 = {
+                message: "abc" 
+           };
+
+           //truy cap key trong object
+           myObject1.message = "bcd"; //cach 1
+           myObject1["message"]="cde"; //cach 2
+           console.log(myObject1.message);
+
+           //tao contructer Object
+           myObject2 =new Object();
+           myObject2.message="edf";
+            console.log(myObject2.message);
+
+            //truy cap gan gtri cua object co key la mot function
+            myObject2.message1 =function(){
+                return "fgh";
+            }
+
+             console.log(myObject2.message1);
+
+             //Object undefine
+             myObject3 =new Object();
+            console.log(myObject3 .yes);
+            //kiem tra key co ton tai trong object hay k
+            if (myObject3.hasOwnProperty("yes")) {
+                console.log(myObject3 .yes);
+            }else{
+                console.log("not exists");
+            }
+            //duyet tat ca cac key trong object
+            for (var key in myObject1) {
+                console.log(key);
             }
 
         </script>
